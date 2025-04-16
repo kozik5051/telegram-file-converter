@@ -33,7 +33,7 @@ CODECS = ["libx264", "libx265", "libvpx-vp9"]
 @dp.message_handler(Command("start"))
 async def start_command(message: Message):
     kb = InlineKeyboardMarkup().add(
-        InlineKeyboardButton("📲 Открыть мини-приложение", web_app=WebAppInfo(url="https://yourdomain.com/app"))
+        InlineKeyboardButton("📲 Открыть мини-приложение", web_app=WebAppInfo(url="https://site-production-e110.up.railway.app"))
     )
     await message.answer(
         "👋 Привет! Я могу конвертировать медиа 🎵, видео 🎥 и документы 📄.\n\nПросто отправь файл или используй меню ниже:",
