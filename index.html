@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Конвертер файлов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .format-btn {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #2a9df4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .format-btn:hover {
+      background-color: #1c7ecb;
+    }
+  </style>
+</head>
+<body>
+  <h2>Выберите формат для конвертации</h2>
+
+  <button class="format-btn" onclick="sendData('mp3')">🎵 MP3</button>
+  <button class="format-btn" onclick="sendData('wav')">🎧 WAV</button>
+  <button class="format-btn" onclick="sendData('mp4')">🎥 MP4</button>
+  <button class="format-btn" onclick="sendData('avi')">📽 AVI</button>
+  <button class="format-btn" onclick="sendData('pdf_to_word')">📄 PDF → Word</button>
+  <button class="format-btn" onclick="sendData('word_to_pdf')">📝 Word → PDF</button>
+
+  <script>
+    function sendData(format) {
+      Telegram.WebApp.sendData(format);
+      Telegram.WebApp.close();
+    }
+  </script>
+</body>
+</html>
