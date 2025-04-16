@@ -1,5 +1,0 @@
-aiogram==2.25.1
-python-dotenv==1.0.0
-pdf2docx==0.5.7
-docx2pdf==0.1.8
-ffmpeg-python==0.2.0
